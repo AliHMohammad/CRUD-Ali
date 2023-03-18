@@ -34,12 +34,7 @@ function saveForm() {
     const email = document.querySelector("#email").value;
     const number = document.querySelector("#phone_number").value;
 
-    const person = {
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        number: number
-    };
+    const person = { firstName, lastName, email, number };
 
     setJSON(person);
 

@@ -138,4 +138,5 @@ body {
 .grid_footer {
   grid-area: fo;
   background-color: grey;
+  text-align: center;
 }
