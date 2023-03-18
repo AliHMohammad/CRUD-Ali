@@ -1,5 +1,12 @@
+@import url(animations.css);
+
 body {
   margin: 0;
+  overflow-x: hidden;
+}
+
+.hidden{
+    display: none;
 }
 
 .grid_container {
@@ -10,7 +17,7 @@ body {
     "fo";
 }
 
-/* HEADER */
+/*====================== HEADER ======================*/
 
 .grid_header {
   grid-area: he;
@@ -20,21 +27,25 @@ body {
   text-align: center;
 }
 
-/* MAIN */
+/*====================== MAIN ======================*/
 
 .grid_section {
   background-color: beige;
-  height: 90vh;
+  height: 100vh;
   grid-area: se;
 }
 
 #section_content{
     /* padding-top: 20vh;
     padding-bottom: 100vh; */
-    padding-top: 10%;
-    position: relative;
-    left: 20%;
+    margin-top: 100px;
+    position: absolute;
+    left: 37vw;
     
+}
+
+#add_person_button{
+    margin-bottom: 5px;
 }
 
 #main_table {
@@ -69,7 +80,60 @@ body {
   padding-right: 30px;
 }
 
-/* FOOTER */
+/*====================== NEW PERSON ======================*/
+
+
+#add_new_person_popup{
+    position: absolute;
+    border-radius: 25px;
+    left: 40%;
+    top: 50%;
+    background-color: green;
+    height: 350px;
+    width: 500px;
+    z-index: 2;
+}
+
+#add_new_person_popup h2{
+    text-align: center;
+}
+
+#add_new_person_popup label, #add_new_person_popup input{
+    position: relative;
+    left: 10%;
+    padding-left: 5px;
+}
+
+#add_new_person_popup label{
+    
+}
+
+#add_new_person_popup input{
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+    width: 75%;
+}
+
+#button_close{
+    position: relative;
+    top: 5%;
+    left: 10%;
+}
+
+#button_add{
+    position: relative;
+    top: 5%;
+    left: 68.3%;
+}
+
+#button_add:hover, #button_close:hover, #add_person_button:hover{
+    cursor: pointer;
+}
+
+
+/*====================== FOOTER ======================*/
 
 .grid_footer {
   grid-area: fo;
