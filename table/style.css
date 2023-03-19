@@ -1,148 +1,103 @@
-@import url(animations.css);
-
 body {
   margin: 0;
-  overflow-x: hidden;
-}
-
-.hidden{
-    display: none;
+  min-width: 620px;
+  font-family: "Hoefler Text", "Century Schoolbook", "Georgia", serif;
 }
 
 .grid_container {
   display: grid;
-  grid-template-areas:
-    "he"
-    "se"
-    "fo";
-  grid-template-rows: 10vh 85vh 5vh;
   grid-template-columns: 1fr;
+  grid-template-rows: 7em 10fr 5em;
 }
 
-/*====================== HEADER ======================*/
-
 .grid_header {
-  grid-area: he;
-  background-color: blue;
-  border: 1px solid black;
-  color: bisque;
+  text-align: center;
+  background-color: red;
+  
+}
+
+.grid_header h1 {
+  padding-top: 10px;
+}
+
+.grid_footer {
+  background-color: grey;
   text-align: center;
 }
 
-/*====================== MAIN ======================*/
+/*Header*/
 
-.grid_section {
-  background-color: beige;
-  grid-area: se;
-
+#button_font {
+  position: relative;
+  top: -10%;
+  background-color: rgb(232, 41, 41);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-#section_content{
-  /* padding-top: 20vh;
-  padding-bottom: 100vh; */
-  margin-top: 100px;
-  position: absolute;
-  left: 5%;
-    
+#button_font:hover {
+  cursor: pointer;
 }
 
-#add_person_button{
-    margin-bottom: 5px;
+#click_read_more_text {
+  text-align: center;
 }
+
+/*TAQBEL*/
 
 #main_table {
   background-color: antiquewhite;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
   border-collapse: collapse;
-  overflow-y:scroll;
-  height:300px;
-  display:block;
-  
 }
 
 #main_table td {
   border: 1px solid brown;
-  padding-left: 5px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+#main_table td:nth-child(1) {
+  width: 80px;
+}
+
+/* the second */
+#main_table td:nth-child(2) {
+  width: 500px;
+}
+
+/* the third */
+#main_table td:nth-child(3) {
+  width: 200px;
 }
 
 #first_row {
   font-weight: bold;
 }
 
-#table_first_name_padding {
-  padding-right: 50px;
+#table_picture {
 }
 
-#table_last_name_padding {
-  padding-right: 50px;
+#table_title {
 }
 
-#table_email_padding {
-  padding-right: 150px;
+#table_author {
 }
 
-#table_number_padding {
-  padding-right: 30px;
+#table_release_year {
 }
 
-/*====================== NEW PERSON ======================*/
-
-
-#add_new_person_popup{
-    position: absolute;
-    border-radius: 25px;
-    left: 40%;
-    top: 50%;
-    background-color: green;
-    height: 350px;
-    width: 500px;
-    z-index: 2;
+td img {
+  width: 80px;
 }
 
-#add_new_person_popup h2{
-    text-align: center;
+td img:hover {
+  cursor: pointer;
 }
 
-#add_new_person_popup label, #add_new_person_popup input{
-    position: relative;
-    left: 10%;
-    padding-left: 5px;
-}
-
-#add_new_person_popup label{
-    
-}
-
-#add_new_person_popup input{
-    padding-bottom: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    
-    width: 75%;
-}
-
-#button_close{
-    position: relative;
-    top: 5%;
-    left: 10%;
-}
-
-#button_add{
-    position: relative;
-    top: 5%;
-    left: 68.3%;
-}
-
-#button_add:hover, #button_close:hover, #add_person_button:hover{
-    cursor: pointer;
-}
-
-
-/*====================== FOOTER ======================*/
-
-.grid_footer {
-  grid-area: fo;
-  background-color: grey;
-  text-align: center;
+.center {
+  margin-left: auto;
+  margin-right: auto;
 }
