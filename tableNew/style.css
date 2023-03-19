@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  min-width: 620px;
+  font-family: "Hoefler Text", "Century Schoolbook", "Georgia", serif;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 7em 10fr 5em;
+}
+
+.grid_header {
+  text-align: center;
+  background-color: red;
+  
+}
+
+.grid_header h1 {
+  padding-top: 10px;
+}
+
+.grid_footer {
+  background-color: grey;
+  text-align: center;
+}
+
+/*Header*/
+
+#button_font {
+  position: relative;
+  top: -10%;
+  background-color: rgb(232, 41, 41);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#button_font:hover {
+  cursor: pointer;
+}
+
+#click_read_more_text {
+  text-align: center;
+}
+
+/*TAQBEL*/
+
+#main_table {
+  background-color: antiquewhite;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  border-collapse: collapse;
+}
+
+#main_table td {
+  border: 1px solid brown;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+#main_table td:nth-child(1) {
+  width: 80px;
+}
+
+/* the second */
+#main_table td:nth-child(2) {
+  width: 500px;
+}
+
+/* the third */
+#main_table td:nth-child(3) {
+  width: 200px;
+}
+
+#first_row {
+  font-weight: bold;
+}
+
+#table_picture {
+}
+
+#table_title {
+}
+
+#table_author {
+}
+
+#table_release_year {
+}
+
+td img {
+  width: 80px;
+}
+
+td img:hover {
+  cursor: pointer;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
