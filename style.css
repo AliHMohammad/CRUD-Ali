@@ -15,6 +15,8 @@ body {
     "he"
     "se"
     "fo";
+  grid-template-rows: 10vh 85vh 5vh;
+  grid-template-columns: 1fr;
 }
 
 /*====================== HEADER ======================*/
@@ -31,16 +33,16 @@ body {
 
 .grid_section {
   background-color: beige;
-  height: 100vh;
   grid-area: se;
+
 }
 
 #section_content{
-    /* padding-top: 20vh;
-    padding-bottom: 100vh; */
-    margin-top: 100px;
-    position: absolute;
-    left: 37vw;
+  /* padding-top: 20vh;
+  padding-bottom: 100vh; */
+  margin-top: 100px;
+  position: absolute;
+  left: 5%;
     
 }
 
@@ -51,6 +53,10 @@ body {
 #main_table {
   background-color: antiquewhite;
   border-collapse: collapse;
+  overflow-y:scroll;
+  height:300px;
+  display:block;
+  
 }
 
 #main_table td {

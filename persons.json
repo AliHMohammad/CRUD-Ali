@@ -1,0 +1,20 @@
+[
+  {
+    "firstName": "Per",
+    "lastName": "Nissen",
+    "email": "blabla@live.dk",
+    "number": "12345678"
+  },
+  {
+    "firstName": "Junior",
+    "lastName": "Ole",
+    "email": "Ole@live.dk",
+    "number": "98765421"
+  },
+  {
+    "firstName": "Hali",
+    "lastName": "Hallo",
+    "email": "Salam@live.dk",
+    "number": "98325651"
+  }
+]
