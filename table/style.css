@@ -43,9 +43,9 @@ body {
   text-align: center;
 }
 
-/*TAQBEL*/
+/*TABEL*/
 
-#main_table {
+table {
   background-color: antiquewhite;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -53,44 +53,32 @@ body {
   border-collapse: collapse;
 }
 
-#main_table td {
+table td {
   border: 1px solid brown;
   white-space: nowrap;
   padding: 10px;
 }
 
-#main_table td:nth-child(1) {
+table td:nth-child(1) {
   width: 80px;
 }
 
 /* the second */
-#main_table td:nth-child(2) {
+table td:nth-child(2) {
   width: 500px;
 }
 
 /* the third */
-#main_table td:nth-child(3) {
+table td:nth-child(3) {
   width: 200px;
 }
 
-#main_table td:nth-child(4) {
+table td:nth-child(4) {
   text-align: center;
 }
 
 #first_row {
   font-weight: bold;
-}
-
-#table_picture {
-}
-
-#table_title {
-}
-
-#table_author {
-}
-
-#table_release_year {
 }
 
 td img {
@@ -105,3 +93,5 @@ td img:hover {
   margin-left: auto;
   margin-right: auto;
 }
+
+
