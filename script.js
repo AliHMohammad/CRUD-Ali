@@ -2,7 +2,7 @@
 
 const obama = {
     name: "Barack Obama",
-    nickname: "Hussein",
+    nickname: "'Hussein'",
     image: "https://static.wikia.nocookie.net/southpark/images/f/f0/Barack-obama.png",
     occupation: "President of the United States (formerly)",
     age: 61,
@@ -13,7 +13,7 @@ const obama = {
     hairColor: "Black",
     schoolGrade: undefined,
     episodes: "S01E01, S01E02",
-    appearances: 29,
+    appearances: 5,
     firstAppearance: "S12E02"
 
 }
@@ -21,7 +21,12 @@ const obama = {
 window.addEventListener("load", initApp);
 
 function initApp() {
-    
+    showChar(obama)   
+    showChar(obama)
+    showChar(obama)
+    showChar(obama)
+    showChar(obama)
+    showChar(obama)
 }
 
 

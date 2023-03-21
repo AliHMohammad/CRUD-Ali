@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    min-width: 550px;
     font-family: "Hoefler Text", "Century Schoolbook", "Georgia", serif;
 }
 
@@ -12,7 +11,7 @@ body {
 
 .grid_header {
     text-align: center;
-    background-color: red;
+    background-color: rgb(189,2,44);
 }
 
 #button_font {
@@ -33,16 +32,18 @@ body {
     gap: 2em;
     grid-auto-rows: 10fr;
     grid-template-columns: 1fr;
+    background-color: rgb(238,89,15);
 }
 
 .grid_item {
     border: 1px solid black;
     padding: 1em;
-    background-color: antiquewhite;
+    background-color: rgb(148,91,71);
+    border-radius: 10px;
 }
 
 .grid_footer {
-    background-color: grey;
+    background-color: rgb(86,221,18);
     text-align: center;
 }
 
@@ -82,6 +83,12 @@ body {
 @media (min-width: 1900px) {
     .grid_section {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 2500px) {
+    .grid_section {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 }
 
