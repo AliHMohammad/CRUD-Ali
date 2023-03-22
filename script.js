@@ -9,7 +9,7 @@ const obama = {
     voicedBy: "Trey Parker",
     gender: "Male",
     religion: "Protestant",
-    catchPhrase: "My fellow Americans",
+    catchPhrase: '"My fellow Americans"',
     hairColor: "Black",
     schoolGrade: undefined,
     episodes: "S01E01, S01E02",
@@ -35,7 +35,7 @@ function initApp() {
 
 function getData() {
     const data = [];
-    return data
+    return data;
 }
 
 function showAllChar(list) {
@@ -56,22 +56,42 @@ function showChar(obj) {
     document.querySelector("article:last-child").addEventListener("click", charClicked);
 
     function charClicked() {
-        showDialog(obj)
+        showDialog(obj);
     }
 
 }
 
 function showDialog(obj) {
-    // Vi laver const dialog = printer et dialog element ud.
+    
     // Kan kalde støtte funktioner for at formatte date f.eks (obj.date = formatDate(date))
     
-    console.log(obj.gender)
+    console.log(obj.gender);
     console.log("hello");
-    document.querySelector("#dialog").classList.remove("hidden")
-    document.querySelector("#btn_close").addEventListener("click", closeDialog)
+
+    document.querySelector("#dialog_h4intro").textContent = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}`
+
+    document.querySelector("#dialog_h3title").textContent = obj.name.toUpperCase();
+    document.querySelector("#dialog_name").textContent = obj.name;    
+    document.querySelector("#dialog_nickname").textContent = obj.nickname;
+    document.querySelector("#dialog_occupation").textContent = obj.occupation;
+    document.querySelector("#dialog_age").textContent = obj.age;
+    document.querySelector("#dialog_voicedby").textContent = obj.voicedBy;
+    document.querySelector("#dialog_gender").textContent = obj.gender;
+    document.querySelector("#dialog_religion").textContent = obj.religion;
+    document.querySelector("#dialog_catchphrase").textContent = obj.catchPhrase;
+    document.querySelector("#dialog_haircolor").textContent = obj.hairColor;
+    document.querySelector("#dialog_schoolgrade").textContent = obj.schoolGrade;
+    document.querySelector("#dialog_episodes").textContent = obj.episodes;
+    document.querySelector("#dialog_appearances").textContent = obj.appearances;
+    document.querySelector("#dialog_firstappearance").textContent = obj.firstAppearance;
+
+
+    document.querySelector("#dialog").classList.remove("hidden");
+    document.querySelector("#btn_close").addEventListener("click", closeDialog);
 }
 
 function closeDialog() {
     console.log("close");
-    document.querySelector("#dialog").classList.add("hidden")
+    document.querySelector("#btn_close").removeEventListener("click", closeDialog);
+    document.querySelector("#dialog").classList.add("hidden");
 }

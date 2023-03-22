@@ -13,10 +13,13 @@
 <body>
 
     <main class="grid_container">
+
+
         <header class="grid_header">
             <h1>South Park - Grid</h1>
             <a id="button_font" href="./table/indexTabel.html">Skift til tabel!</a>
         </header>
+
 
         <section class="grid_section" id="output">
 
@@ -24,37 +27,8 @@
                 <img src="./Media/manifest.jpg">
                 <h3>Det Kommunistiske Manifest</h3>
                 <h4>Karl Marx & Frederich Engels</h4>
-            </article>
-    
-            <article class="grid_item">
-                <img src="./Media/duhring.jpg">
-                <h3>Anti-Duhring</h3>
-                <h4>Frederich Engels</h4>
-            </article>
-
-            <article class="grid_item">
-                <img src="./Media/Kapitalen.jpg">
-                <h3>Kapitalen - 1 Del</h3>
-                <h4>Karl Marx</h4>
-            </article>
-
-            <article class="grid_item">
-                <img src="./Media/StatenOgRev.jpg">
-                <h3>Staten og Revolutionen</h3>
-                <h4>Vladimir Lenin</h4>
-            </article>
-
-            <article class="grid_item">
-                <img src="./Media/Oprindelse.jpg">
-                <h3>Familien, Privatejendommen og Statens Oprindelse</h3>
-                <h4>Frederich Engels</h4>
-            </article>
-
-            <article class="grid_item">
-                <img src="./Media/HvadMåDerGøres.jpg">
-                <h3>Hvad Må Der Gøres?</h3>
-                <h4>Vladimir Lenin</h4>
             </article> -->
+    
 
         </section>
 
@@ -63,35 +37,47 @@
             <h2>Made by Ali</h2>
         </footer>
         
+
         <dialog class="grid_dialog_container hidden" id="dialog" >
             
             <div class="grid_dialog_title">
-                <h3>Barack Obama</h3>
+                <h3 id="dialog_h3title"></h3>
             </div>
 
             <div class="grid_dialog_img">
                <img src="https://static.wikia.nocookie.net/southpark/images/f/f0/Barack-obama.png"> 
             </div>
 
+            <div class="grid_dialog_introtext">
+                <h4 id="dialog_h4intro"></h4>
+            </div>
+
             <div class="grid_dialog_list">
+
                 <ul>
+                    <li>Name: <span id="dialog_name"></span></li>
+                    <li>Nickname: <span id="dialog_nickname"></span></li>
                     <li>Age: <span id="dialog_age"></span></li>
-                    <li>hello</li>
-                    <li>hello</li>
-                    <li>hello</li>
-                    <li>hello</li>
-                    <li>hello</li>
-                    <li>hello</li>
-                    <li>hello</li>
+                    <li>Occupation: <span id="dialog_occupation"></span></li>
+                    <li>Gender: <span id="dialog_gender"></span></li>
+                    <li>Religion: <span id="dialog_religion"></span></li>
+                    <li>Voiced by: <span id="dialog_voicedby"></span></li>
+                    <li>Catchphrase: <span id="dialog_catchphrase"></span></li>
+                    <li>Hair Color: <span id="dialog_haircolor"></span></li>
+                    <li>School Grade: <span id="dialog_schoolgrade"></span></li>
+                    <li>Episodes: <span id="dialog_episodes"></span></li>
+                    <li>Appearances: <span id="dialog_appearances"></span></li>
+                    <li>First Appearance: <span id="dialog_firstappearance"></span></li>
                 </ul>
+                
             </div>
 
             <div class="grid_dialog_close">
                 <button id="btn_close">Close</button>
             </div>
 
-
         </dialog>
+
         
     </main>
     

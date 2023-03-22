@@ -97,7 +97,8 @@ body {
 .grid_dialog_container {
     display: grid;
     position: fixed;
-    margin-top: 4%;
+    margin-top: 2.5%;
+    
     /* position: absolute;
     margin-top: 3%; */
     grid-template-areas: 
@@ -106,39 +107,68 @@ body {
     "lis"
     "clos";
     width: 80%;
+    max-width: 1000px;
+    padding: 0px;
+    background-color: rgb(238,89,15);
+
 }
 
 .grid_dialog_title {
     grid-area: tit;
     text-align: center;
+    background-color: rgb(189,2,44);
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
 }
 
 .grid_dialog_img {
     grid-area: img;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.grid_dialog_img img {
     margin: auto;
 }
 
+.grid_dialog_introtext {
+    grid-area: int;
+}
 
 .grid_dialog_list {
     grid-area: lis;
     
+    
 }
+
+.grid_dialog_list ul {
+    padding-left: 17px;
+}
+
 
 .grid_dialog_close {
     grid-area: clos;
-    margin: auto;
+    background-color: rgb(86,221,18);
+    border-top: 1px solid black;
 }
 
-@media (min-width: 800px) {
+#btn_close {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    left: 47%;
+}
+
+@media (min-width:500px) {
     .grid_dialog_container {
         grid-template-areas: 
     "tit tit"
+    "img int"
     "img lis"
     "clos clos";
+        
     }
-    .grid_dialog_list {
-        margin-top: 20%;
-    }
+    
 }
 
 .hidden {
