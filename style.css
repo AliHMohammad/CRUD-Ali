@@ -92,3 +92,55 @@ body {
     }
 }
 
+/*===================== DIALOG ===================*/
+
+.grid_dialog_container {
+    display: grid;
+    position: fixed;
+    margin-top: 4%;
+    /* position: absolute;
+    margin-top: 3%; */
+    grid-template-areas: 
+    "tit"
+    "img"
+    "lis"
+    "clos";
+    width: 80%;
+}
+
+.grid_dialog_title {
+    grid-area: tit;
+    text-align: center;
+}
+
+.grid_dialog_img {
+    grid-area: img;
+    margin: auto;
+}
+
+
+.grid_dialog_list {
+    grid-area: lis;
+    
+}
+
+.grid_dialog_close {
+    grid-area: clos;
+    margin: auto;
+}
+
+@media (min-width: 800px) {
+    .grid_dialog_container {
+        grid-template-areas: 
+    "tit tit"
+    "img lis"
+    "clos clos";
+    }
+    .grid_dialog_list {
+        margin-top: 20%;
+    }
+}
+
+.hidden {
+    display: none;
+}

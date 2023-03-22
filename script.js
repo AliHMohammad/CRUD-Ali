@@ -21,6 +21,9 @@ const obama = {
 window.addEventListener("load", initApp);
 
 function initApp() {
+    const data = getData();
+    //showAllChar(data)
+
     showChar(obama)   
     showChar(obama)
     showChar(obama)
@@ -29,6 +32,15 @@ function initApp() {
     showChar(obama)
 }
 
+
+function getData() {
+    const data = [];
+    return data
+}
+
+function showAllChar(list) {
+    //For x of y{showChar(x)}
+}
 
 function showChar(obj) {
     const html = /*html*/ `
@@ -40,4 +52,26 @@ function showChar(obj) {
     `
 
     document.querySelector("#output").insertAdjacentHTML("beforeend", html);
+
+    document.querySelector("article:last-child").addEventListener("click", charClicked);
+
+    function charClicked() {
+        showDialog(obj)
+    }
+
+}
+
+function showDialog(obj) {
+    // Vi laver const dialog = printer et dialog element ud.
+    // Kan kalde støtte funktioner for at formatte date f.eks (obj.date = formatDate(date))
+    
+    console.log(obj.gender)
+    console.log("hello");
+    document.querySelector("#dialog").classList.remove("hidden")
+    document.querySelector("#btn_close").addEventListener("click", closeDialog)
+}
+
+function closeDialog() {
+    console.log("close");
+    document.querySelector("#dialog").classList.add("hidden")
 }
