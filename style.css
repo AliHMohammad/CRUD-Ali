@@ -94,6 +94,10 @@ body {
 
 /*===================== DIALOG ===================*/
 
+dialog {
+    
+}
+
 .grid_dialog_container {
     display: grid;
     position: fixed;
