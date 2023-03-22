@@ -30,6 +30,11 @@ function initApp() {
     showChar(obama)
     showChar(obama)
     showChar(obama)
+    showChar(obama)
+    showChar(obama)
+    showChar(obama)
+    showChar(obama)
+    showChar(obama)
 }
 
 

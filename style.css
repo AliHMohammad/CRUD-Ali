@@ -97,7 +97,7 @@ body {
 .grid_dialog_container {
     display: grid;
     position: fixed;
-    margin-top: 2.5%;
+    
     
     /* position: absolute;
     margin-top: 3%; */
@@ -166,6 +166,7 @@ body {
     "img int"
     "img lis"
     "clos clos";
+        
         
     }
     
