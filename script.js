@@ -12,7 +12,7 @@ const obama = {
     catchPhrase: '"My fellow Americans"',
     hairColor: "Black",
     schoolGrade: undefined,
-    episodes: "S01E01, S01E02",
+    episodes: "S12E02, S12E12, S14E01, S15E02, S16E14",
     appearances: 5,
     firstAppearance: "S12E02"
 
@@ -68,7 +68,7 @@ function showDialog(obj) {
     console.log(obj.gender);
     console.log("hello");
 
-    document.querySelector("#dialog_h4intro").textContent = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}`
+    document.querySelector("#dialog_h4intro").textContent = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}.`
 
     document.querySelector("#dialog_h3title").textContent = obj.name.toUpperCase();
     document.querySelector("#dialog_name").textContent = obj.name;    
