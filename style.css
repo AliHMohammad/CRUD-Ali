@@ -1,9 +1,8 @@
 body {
     margin: 0;
     font-family: "Hoefler Text", "Century Schoolbook", "Georgia", serif;
+    
 }
-
-
 
 .grid_container {
     display: grid;
@@ -13,19 +12,13 @@ body {
 
 .grid_header {
     text-align: center;
-    background-color: rgb(189,2,44);
+    background-color: rgb(189, 2, 44);
 }
 
-#button_font {
-    position: relative;
-    top: -10%;
-    background-color: rgb(232, 41, 41);
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    color: yellow;
-}
+
 
 .grid_header h1 {
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 .grid_section {
@@ -34,18 +27,18 @@ body {
     gap: 2em;
     grid-auto-rows: 10fr;
     grid-template-columns: 1fr;
-    background-color: rgb(238,89,15);
+    background-color: rgb(238, 89, 15);
 }
 
 .grid_item {
     border: 1px solid black;
     padding: 1em;
-    background-color: rgb(148,91,71);
+    background-color: rgb(148, 91, 71);
     border-radius: 10px;
 }
 
 .grid_footer {
-    background-color: rgb(86,221,18);
+    background-color: rgb(86, 221, 18);
     text-align: center;
 }
 
@@ -96,33 +89,34 @@ body {
 
 /*===================== DIALOG ===================*/
 
-
-
 .grid_dialog_container {
     display: grid;
     position: fixed;
-    min-width:450px;
-    
+    min-width: 450px;
+
     /* position: absolute;
     margin-top: 3%; */
-    grid-template-areas: 
-    "tit"
-    "img"
-    "lis"
-    "clos";
+    grid-template-areas:
+        "tit"
+        "img"
+        "lis"
+        "clos";
     width: 80%;
     max-width: 1000px;
     padding: 0px;
-    background-color: rgb(238,89,15);
-
+    background-color: rgb(238, 89, 15);
 }
 
 .grid_dialog_title {
     grid-area: tit;
     text-align: center;
-    background-color: rgb(189,2,44);
+    background-color: rgb(189, 2, 44);
     border-bottom: 1px solid black;
     margin-bottom: 10px;
+}
+
+.grid_dialog_title h3 {
+    font-size: 1.70em;
 }
 
 .grid_dialog_img {
@@ -141,8 +135,6 @@ body {
 
 .grid_dialog_list {
     grid-area: lis;
-    
-    
 }
 
 .grid_dialog_list ul {
@@ -153,10 +145,9 @@ body {
     padding-top: 5px;
 }
 
-
 .grid_dialog_close {
     grid-area: clos;
-    background-color: rgb(86,221,18);
+    background-color: rgb(86, 221, 18);
     border-top: 1px solid black;
 }
 
@@ -165,21 +156,26 @@ body {
     margin-top: 15px;
     margin-bottom: 15px;
     left: 47%;
+    scale: 1.2;
 }
 
-@media (min-width:500px) {
+@media (min-width: 500px) {
     .grid_dialog_container {
-        grid-template-areas: 
-    "tit tit"
-    "img int"
-    "img lis"
-    "clos clos";
-        
-        
+        grid-template-areas:
+            "tit tit"
+            "img int"
+            "img lis"
+            "clos clos";
     }
-    
 }
 
 .hidden {
     display: none;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
