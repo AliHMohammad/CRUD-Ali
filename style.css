@@ -3,6 +3,8 @@ body {
     font-family: "Hoefler Text", "Century Schoolbook", "Georgia", serif;
 }
 
+
+
 .grid_container {
     display: grid;
     grid-template-columns: 1fr;
@@ -94,9 +96,7 @@ body {
 
 /*===================== DIALOG ===================*/
 
-dialog {
-    
-}
+
 
 .grid_dialog_container {
     display: grid;

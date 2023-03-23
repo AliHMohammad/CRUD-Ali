@@ -21,7 +21,7 @@
 window.addEventListener("load", initApp);
 
 async function initApp() {
-    const data = await getData();
+    const data = await getData("https://raw.githubusercontent.com/AliHMohammad/Data-Ali/main/obama.json");
     showAllChar(data)
 
     // showChar(obama)   
@@ -49,9 +49,9 @@ async function getData(link) {
 
 function showAllChar(list) {
 
-    // for (obj of list) {
-    //     showChar(obj);
-    // }
+    for (const obj of list) {
+        showChar(obj);
+    }
 
 }
 
