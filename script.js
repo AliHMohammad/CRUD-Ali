@@ -64,11 +64,7 @@ function showChar(obj) {
 }
 
 function showDialog(obj) {
-    
     // Kan kalde støtte funktioner for at formatte date f.eks (obj.date = formatDate(date))
-    
-    console.log(obj.gender);
-    console.log("hello");
 
     document.querySelector("#dialog_h4intro").textContent = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}.`
 
@@ -87,13 +83,32 @@ function showDialog(obj) {
     document.querySelector("#dialog_appearances").textContent = obj.appearances;
     document.querySelector("#dialog_firstappearance").textContent = obj.firstAppearance;
 
-
-    document.querySelector("#dialog").classList.remove("hidden");
+    showStartAnimation()
     document.querySelector("#btn_close").addEventListener("click", closeDialog);
 }
 
 function closeDialog() {
-    console.log("close");
     document.querySelector("#btn_close").removeEventListener("click", closeDialog);
+    showCloseAnimation()
+
+}
+
+function showStartAnimation() {
+    document.querySelector("#dialog").classList.add("slideLeftToRight");
+    document.querySelector("#dialog").classList.remove("hidden")
+}
+
+
+function showCloseAnimation() {
+    document.querySelector("#dialog").classList.add("slideRightToLeft");
+
+    document.querySelector("#dialog").addEventListener("animationend", removeAnimationsAddHidden);
+}
+
+function removeAnimationsAddHidden() {
+    document.querySelector("#dialog").removeEventListener("animationend", removeAnimationsAddHidden);
     document.querySelector("#dialog").classList.add("hidden");
+    document.querySelector("#dialog").classList.remove("slideRightToLeft");
+    document.querySelector("#dialog").classList.remove("slideLeftToRight");
+   
 }
