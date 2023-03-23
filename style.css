@@ -13,6 +13,7 @@ body {
 .grid_header {
     text-align: center;
     background-color: rgb(189, 2, 44);
+    border-bottom: 1px solid black;
 }
 
 .grid_header h1 {
@@ -38,6 +39,7 @@ body {
 .grid_footer {
     background-color: rgb(86, 221, 18);
     text-align: center;
+    border-top: 1px solid black;
 }
 
 .grid_item img {
