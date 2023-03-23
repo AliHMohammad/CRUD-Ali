@@ -1,22 +1,22 @@
 "use strict";
 
-const obama = {
-    name: "Barack Obama",
-    nickname: "'Hussein'",
-    image: "https://static.wikia.nocookie.net/southpark/images/f/f0/Barack-obama.png",
-    occupation: "President of the United States (formerly)",
-    age: 61,
-    voicedBy: "Trey Parker",
-    gender: "Male",
-    religion: "Protestant",
-    catchPhrase: '"My fellow Americans"',
-    hairColor: "Black",
-    schoolGrade: undefined,
-    episodes: "S12E02, S12E12, S14E01, S15E02, S16E14",
-    appearances: 5,
-    firstAppearance: "S12E02"
+// const obama = {
+//     name: "Barack Obama",
+//     nickname: "'Hussein'",
+//     image: "https://static.wikia.nocookie.net/southpark/images/f/f0/Barack-obama.png",
+//     occupation: "President of the United States (formerly)",
+//     age: 61,
+//     voicedBy: "Trey Parker",
+//     gender: "Male",
+//     religion: "Protestant",
+//     catchPhrase: '"My fellow Americans"',
+//     hairColor: "Black",
+//     schoolGrade: undefined,
+//     episodes: "S12E02, S12E12, S14E01, S15E02, S16E14",
+//     appearances: 5,
+//     firstAppearance: "S12E02"
 
-}
+// }
 
 window.addEventListener("load", initApp);
 
@@ -24,22 +24,25 @@ async function initApp() {
     //const data = await getData();
     //showAllChar(data)
 
-    showChar(obama)   
-    showChar(obama)
-    showChar(obama)
-    showChar(obama)
-    showChar(obama)
-    showChar(obama)
-    showChar(obama)
-    showChar(obama)
-    showChar(obama)
-    showChar(obama)
-    showChar(obama)
+    // showChar(obama)   
+    // showChar(obama)
+    // showChar(obama)
+    // showChar(obama)
+    // showChar(obama)
+    // showChar(obama)
+    // showChar(obama)
+    // showChar(obama)
+    // showChar(obama)
+    // showChar(obama)
+    // showChar(obama)
+    
+    
+    
 }
 
 
 async function getData() {
-    const response = await fetch("link");
+    const response = await fetch();
     const data = await response.json();
     return data;
 }
