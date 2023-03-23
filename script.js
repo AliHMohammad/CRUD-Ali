@@ -20,8 +20,8 @@ const obama = {
 
 window.addEventListener("load", initApp);
 
-function initApp() {
-    const data = getData();
+async function initApp() {
+    //const data = await getData();
     //showAllChar(data)
 
     showChar(obama)   
@@ -38,13 +38,19 @@ function initApp() {
 }
 
 
-function getData() {
-    const data = [];
+async function getData() {
+    const response = await fetch("link");
+    const data = await response.json();
     return data;
 }
 
 function showAllChar(list) {
     //For x of y{showChar(x)}
+
+    // for (obj of list) {
+    //     showChar(obj);
+    // }
+
 }
 
 function showChar(obj) {
