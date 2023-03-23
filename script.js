@@ -21,8 +21,8 @@
 window.addEventListener("load", initApp);
 
 async function initApp() {
-    //const data = await getData();
-    //showAllChar(data)
+    const data = await getData();
+    showAllChar(data)
 
     // showChar(obama)   
     // showChar(obama)
@@ -36,19 +36,18 @@ async function initApp() {
     // showChar(obama)
     // showChar(obama)
     
-    
-    
+    //const obama = await getData("https://raw.githubusercontent.com/AliHMohammad/Data-Ali/main/obama.json")
+    //showChar(obama)
 }
 
 
-async function getData() {
-    const response = await fetch();
+async function getData(link) {
+    const response = await fetch(link);
     const data = await response.json();
     return data;
 }
 
 function showAllChar(list) {
-    //For x of y{showChar(x)}
 
     // for (obj of list) {
     //     showChar(obj);
