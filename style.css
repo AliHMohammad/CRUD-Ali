@@ -15,8 +15,6 @@ body {
     background-color: rgb(189, 2, 44);
 }
 
-
-
 .grid_header h1 {
     padding-top: 15px;
 }
@@ -97,10 +95,10 @@ body {
     /* position: absolute;
     margin-top: 3%; */
     grid-template-areas:
-        "tit"
-        "img"
-        "lis"
-        "clos";
+        "tit tit"
+        "img int"
+        "img lis"
+        "clos clos";
     width: 80%;
     max-width: 1000px;
     padding: 0px;
@@ -155,18 +153,8 @@ body {
     position: relative;
     margin-top: 15px;
     margin-bottom: 15px;
-    left: 47%;
+    left: 48%;
     scale: 1.2;
-}
-
-@media (min-width: 500px) {
-    .grid_dialog_container {
-        grid-template-areas:
-            "tit tit"
-            "img int"
-            "img lis"
-            "clos clos";
-    }
 }
 
 .hidden {
@@ -174,7 +162,7 @@ body {
 }
 
 .center {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);

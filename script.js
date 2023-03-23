@@ -18,20 +18,13 @@
 
 // }
 
-let displayGrid = true;
-
 window.addEventListener("load", initApp);
 
 async function initApp() {
     const data = await getData("https://raw.githubusercontent.com/AliHMohammad/Data-Ali/main/obama.json");
     showAllChar(data)
 
-    
-
-
-
     // showChar(obama)
-    
     //const obama = await getData("https://raw.githubusercontent.com/AliHMohammad/Data-Ali/main/obama.json")
     //showChar(obama)
 }
@@ -103,8 +96,4 @@ function closeDialog() {
     console.log("close");
     document.querySelector("#btn_close").removeEventListener("click", closeDialog);
     document.querySelector("#dialog").classList.add("hidden");
-}
-
-function animationStart() {
-    
 }
