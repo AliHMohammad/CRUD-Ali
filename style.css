@@ -16,7 +16,6 @@
 body {
     margin: 0;
     min-width: 255px;
-    /* font-family: "Hoefler Text", "Century Schoolbook", "Georgia", serif; */
     font-family: 'Inter', sans-serif;
 }
 
@@ -74,6 +73,7 @@ body {
 
 .grid_item:hover {
     cursor: pointer;
+    scale: 1.03;
 }
 
 .grid_item h3,
@@ -156,7 +156,10 @@ body {
 }
 
 .grid_dialog_img img {
-    margin: auto;
+    width: 200px;
+    height: auto;
+    
+    
 }
 
 .grid_dialog_introtext {

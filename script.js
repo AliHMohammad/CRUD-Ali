@@ -70,6 +70,7 @@ function showDialog(obj) {
 
     document.querySelector("#dialog_h4intro").textContent = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}.`
 
+    document.querySelector("#dialog_img").src = obj.image;
     document.querySelector("#dialog_h3title").textContent = obj.name.toUpperCase();
     document.querySelector("#dialog_name").textContent = obj.name;    
     document.querySelector("#dialog_nickname").textContent = obj.nickname;

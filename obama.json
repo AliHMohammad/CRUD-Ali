@@ -126,6 +126,37 @@
     "episodes": "S01E01 to S10E01",
     "appearances": 136,
     "firstAppearance": "S01E01"
+  },
+  {
+    "name": "Paris Whitney Hilton",
+    "nickname": "Stupid Spoiled Whore",
+    "image": "https://southparkstudios.mtvnimages.com/shared/characters/celebrities/paris-hilton.png",
+    "occupation": "businesswoman, influencer, activist, DJ, designer, investor, recording artist, philanthropist, host, actress, chef, model and author",
+    "age": "Born on February 17th 1981",
+    "voicedBy": "Jennifer",
+    "gender": "Female",
+    "religion": "Yes",
+    "catchPhrase": "Another dog killed itself!",
+    "hairColor": "Bleach blonde",
+    "schoolGrade": "",
+    "episodes": "Yes",
+    "appearances": "5 episodes",
+    "firstAppearance": "s08e12"
+  },
+  {
+    "name": "Tolkien Black",
+    "nickname": "Tupperware , Tupper Mech MK III , Blackie , Congo ",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Token_Black2.webp/250px-Token_Black2.webp.png",
+    "occupation": "Student",
+    "age": "10 years old",
+    "voicedBy": "Trey Parker, Adrien Beard",
+    "gender": "Male",
+    "religion": "Roman Catholic",
+    "catchPhrase": "null",
+    "hairColor": "Black",
+    "schoolGrade": "4th Grade",
+    "episodes": "null",
+    "appearances": "null",
+    "firstAppearance": "Cartman Gets an Anal Probe"
   }
-
 ]
