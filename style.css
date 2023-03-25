@@ -81,13 +81,14 @@ body {
     padding: 1em;
     background-color: var(--silver);
     border-radius: 10px;
+    box-shadow: 0px 1px 7px black;
 }
 
 .grid_footer {
     background-color: var(--taupe);
     text-align: center;
     border: 1px solid black;
-    margin-top: 10px;
+    padding-top: 10px;
 }
 
 .grid_footer h2 {
@@ -105,7 +106,7 @@ body {
     cursor: pointer;
     transition: 0.5s;
     scale: 1.02;
-    box-shadow: 0px 0px 3px black;
+    box-shadow: 0px 2px 5px black;
 }
 
 .grid_item h3,
@@ -149,6 +150,8 @@ body {
 #table_section {
     padding: 20px;
     padding-top: 100px;
+    background-color: var(--isabelline);
+   
 }
 
 table {
@@ -156,6 +159,7 @@ table {
     margin-top: 20px;
     border-collapse: collapse;
     text-align: center;
+     box-shadow: 0px 2px 7px black;
 }
 
 thead {
