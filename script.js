@@ -69,6 +69,7 @@ function showDialog(obj) {
     obj.catchPhrase = nullCatchphrase(obj.catchPhrase);
     obj.episodes = nullEpisodes(obj.episodes);
     obj.appearances = nullAppearances(obj.appearances);
+    correctName(obj.name)
 
     document.querySelector("#dialog_h4intro").textContent = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}.`
 
@@ -161,4 +162,26 @@ function nullAppearances(appearances) {
     } else {
         return appearances
     }
+}
+
+function correctName(name) {
+    
+    let arr = name.split(" ");
+    console.log(arr);
+    
+
+    for (let i = 0; i < arr.length; i++) {
+        let namePart = arr[i];
+
+        
+        const firstLetter = namePart[0].toUpperCase();
+        const restOfNamePart = namePart.toLowerCase().slice(1);
+
+        const correctName = firstLetter.concat(restOfNamePart)
+    
+        arr[i] = correctName
+        console.log(correctName);
+    }
+
+
 }
