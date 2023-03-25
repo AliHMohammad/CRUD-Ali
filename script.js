@@ -71,8 +71,10 @@ function showChar(obj) {
 function showDialog(obj) {
     
     // Kan kalde støtte funktioner for at formatte date f.eks (obj.date = formatDate(date))
-
-    obj.schoolGrade = nullSchoolGrade(obj.schoolGrade)
+    
+    
+    obj.nickname = nullNickname(obj.nickname);
+    obj.schoolGrade = nullSchoolGrade(obj.schoolGrade);
 
     document.querySelector("#dialog_h4intro").textContent = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}.`
 
@@ -101,9 +103,22 @@ function nullSchoolGrade(grade) {
 
     if (!grade) {
         return "None"
+    } else {
+        return grade
     }
     
 }
+
+function nullNickname(nickname) {
+
+    if (!nickname) {
+        return "None"
+    } else {
+        return nickname
+    }
+}
+
+
 
 
 function closeDialog() {
