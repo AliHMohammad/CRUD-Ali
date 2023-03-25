@@ -34,14 +34,16 @@ body {
     width: 100%;
     z-index: 9999;
     box-shadow: 0 4px 10px -5px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
+    
+    padding-top: 7px;
+    padding-bottom: 10px;
 }
 
 .grid_header button {
-    position: fixed;
-    left: 60.5vw;
-    top: 2.2em;
-    scale: 0.85;
+    position: absolute;
+    top: 4.3em;
+    left: 47vw;
+    scale: 0.9;
 
     background-color: rgb(188, 48, 213);
     border-radius: 8px;
@@ -60,10 +62,7 @@ body {
     background-color: #f082ea;
 }
 
-.grid_header h1 {
-    padding-top: 7px;
-    padding-bottom: 7px;
-}
+
 
 .grid_section {
     display: grid;
