@@ -66,6 +66,8 @@ function showChar(obj) {
 function showDialog(obj) {
     // Kan kalde støtte funktioner for at formatte date f.eks (obj.date = formatDate(date))
 
+    obj.schoolGrade = nullSchoolGrade(obj.schoolGrade)
+
     document.querySelector("#dialog_h4intro").textContent = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}.`
 
     document.querySelector("#dialog_h3title").textContent = obj.name.toUpperCase();
@@ -87,6 +89,16 @@ function showDialog(obj) {
     document.querySelector("#btn_close").addEventListener("click", closeDialog);
 }
 
+
+function nullSchoolGrade(grade) {
+
+    if (!grade) {
+        return "None"
+    }
+    
+}
+
+
 function closeDialog() {
     document.querySelector("#btn_close").removeEventListener("click", closeDialog);
     showCloseAnimation()
@@ -101,7 +113,6 @@ function showStartAnimation() {
 
 function showCloseAnimation() {
     document.querySelector("#dialog").classList.add("slideRightToLeft");
-
     document.querySelector("#dialog").addEventListener("animationend", removeAnimationsAddHidden);
 }
 

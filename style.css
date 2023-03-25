@@ -1,7 +1,23 @@
+:root {
+/* --english-violet: #413c58ff;
+--ash-gray: #a3c4bcff;
+--tea-green: #bfd7b5ff;
+--cream: #e7efc5ff;
+--parchment: #f2e7c9ff; */
+
+--taupe: rgb(70, 63, 58);
+--battleship-gray: rgb(138, 129, 124);
+--silver: rgb(188, 184, 177);
+--isabelline: rgb(244, 243, 238);
+--french-violet: rgb(111, 45, 210);
+}
+
+
 body {
     margin: 0;
-    font-family: "Hoefler Text", "Century Schoolbook", "Georgia", serif;
-    
+    min-width: 255px;
+    /* font-family: "Hoefler Text", "Century Schoolbook", "Georgia", serif; */
+    font-family: 'Inter', sans-serif;
 }
 
 .grid_container {
@@ -12,7 +28,8 @@ body {
 
 .grid_header {
     text-align: center;
-    background-color: rgb(189, 2, 44);
+    /* background-color: rgb(189, 2, 44); */
+    background-color: var(--battleship-gray);
     border-bottom: 1px solid black;
 }
 
@@ -26,20 +43,27 @@ body {
     gap: 2em;
     grid-auto-rows: 10fr;
     grid-template-columns: 1fr;
-    background-color: rgb(238, 89, 15);
+    background-color: var(--isabelline);
+    /* background-color: rgb(238, 89, 15); */
 }
 
 .grid_item {
     border: 1px solid black;
     padding: 1em;
-    background-color: rgb(148, 91, 71);
+    /* background-color: rgb(148, 91, 71); */
+    background-color: var(--silver);
     border-radius: 10px;
 }
 
 .grid_footer {
-    background-color: rgb(86, 221, 18);
+    /* background-color: rgb(86, 221, 18); */
+    background-color: var(--taupe);
     text-align: center;
     border-top: 1px solid black;
+}
+
+.grid_footer h2 {
+    padding-top: 2px;
 }
 
 .grid_item img {
@@ -104,15 +128,21 @@ body {
     width: 80%;
     max-width: 1000px;
     padding: 0px;
-    background-color: rgb(238, 89, 15);
+    /* background-color: rgb(238, 89, 15); */
+    background-color: var(--french-violet);
 }
 
 .grid_dialog_title {
     grid-area: tit;
     text-align: center;
-    background-color: rgb(189, 2, 44);
-    border-bottom: 1px solid black;
-    margin-bottom: 10px;
+    /* background-color: rgb(189, 2, 44); */
+    
+    margin-bottom: 15px;
+}
+
+#dialog_h3title {
+    padding-bottom: 1px;
+    border-bottom: 1px solid var(--taupe);
 }
 
 .grid_dialog_title h3 {
@@ -133,6 +163,10 @@ body {
     grid-area: int;
 }
 
+#dialog_h4intro {
+    padding-right: 50px;
+}
+
 .grid_dialog_list {
     grid-area: lis;
 }
@@ -143,12 +177,14 @@ body {
 
 .grid_dialog_list ul li {
     padding-top: 5px;
+    padding-right: 50px;
 }
 
 .grid_dialog_close {
     grid-area: clos;
-    background-color: rgb(86, 221, 18);
-    border-top: 1px solid black;
+    padding-bottom: 10px;
+    /* background-color: rgb(86, 221, 18); */
+    
 }
 
 #btn_close {
