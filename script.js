@@ -18,8 +18,6 @@
 
 // }
 
-let count = 0;
-
 window.addEventListener("load", initApp);
 
 async function initApp() {
@@ -31,7 +29,6 @@ async function initApp() {
     //showChar(obama)
 }
 
-
 async function getData(link) {
     const response = await fetch(link);
     const data = await response.json();
@@ -41,12 +38,8 @@ async function getData(link) {
 function showAllChar(list) {
 
     for (const obj of list) {
-        count++
-        console.log(`Char nr ${count}, ${obj.name}`);
-
         showChar(obj);
     }
-
 }
 
 function showChar(obj) {
@@ -65,16 +58,17 @@ function showChar(obj) {
     function charClicked() {
         showDialog(obj);
     }
-    
 }
 
 function showDialog(obj) {
     
     // Kan kalde støtte funktioner for at formatte date f.eks (obj.date = formatDate(date))
     
-    
     obj.nickname = nullNickname(obj.nickname);
     obj.schoolGrade = nullSchoolGrade(obj.schoolGrade);
+    obj.catchPhrase = nullCatchphrase(obj.catchPhrase);
+    obj.episodes = nullEpisodes(obj.episodes);
+    obj.appearances = nullAppearances(obj.appearances);
 
     document.querySelector("#dialog_h4intro").textContent = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}.`
 
@@ -98,33 +92,9 @@ function showDialog(obj) {
     document.querySelector("#btn_close").addEventListener("click", closeDialog);
 }
 
-
-function nullSchoolGrade(grade) {
-
-    if (!grade) {
-        return "None"
-    } else {
-        return grade
-    }
-    
-}
-
-function nullNickname(nickname) {
-
-    if (!nickname) {
-        return "None"
-    } else {
-        return nickname
-    }
-}
-
-
-
-
 function closeDialog() {
     document.querySelector("#btn_close").removeEventListener("click", closeDialog);
     showCloseAnimation()
-
 }
 
 function showStartAnimation() {
@@ -143,5 +113,52 @@ function removeAnimationsAddHidden() {
     document.querySelector("#dialog").classList.add("hidden");
     document.querySelector("#dialog").classList.remove("slideRightToLeft");
     document.querySelector("#dialog").classList.remove("slideLeftToRight");
-   
+}
+
+
+/* ================= HELPER FUNCTIONS ================= */
+
+function nullNickname(nickname) {
+
+    if (!nickname || nickname == "undefined" || nickname == "null") {
+        return "None"
+    } else {
+        return nickname
+    }
+}
+
+function nullSchoolGrade(grade) {
+
+    if (!grade || grade == "undefined" || grade == "null") {
+        return "None"
+    } else {
+        return grade
+    }
+}
+
+function nullCatchphrase(catchphrase) {
+
+    if (!catchphrase || catchphrase == "undefined" || catchphrase == "null") {
+        return "None"
+    } else {
+        return catchphrase
+    }
+}
+
+function nullEpisodes(episodes) {
+
+    if (!episodes || episodes == "undefined" || episodes == "null") {
+        return "Unknown"
+    } else {
+        return episodes
+    }
+}
+
+function nullAppearances(appearances) {
+
+    if (!appearances || appearances == "undefined" || appearances == "null") {
+        return "Unknown"
+    } else {
+        return appearances
+    }
 }
