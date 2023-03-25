@@ -22,10 +22,30 @@
 
         <header class="grid_header">
             <h1>South Park Characters</h1>
+            <button id="button_change_display">Change Display</button>
         </header>
 
 
-        <section class="grid_section" id="output">
+        <section class="grid_section" id="grid_output">
+
+            
+        </section>
+        
+        <section class="hidden" id="table_section">
+            
+            <table>
+                <thead>
+                    <tr>
+                        <td>Image</td>
+                        <td>Name</td>
+                        <td>Occupation</td>
+                        <td>Age</td>
+                    </tr>
+                </thead>
+                <tbody id="tbody_output">
+                    
+                </tbody>
+            </table>
 
         </section>
 
@@ -35,21 +55,21 @@
         </footer>
 
 
-        <dialog class="grid_dialog_container hidden " id="dialog" >
+        <dialog class="dialog_container hidden " id="dialog" >
             
-            <div class="grid_dialog_title">
+            <div class="dialog_title">
                 <h3><span id="dialog_h3title"></span></h3>
             </div>
 
-            <div class="grid_dialog_img">
-               <img id="dialog_img" src=""> 
+            <div class="dialog_img">
+               <img id="dialog_img_src" src=""> 
             </div>
 
-            <div class="grid_dialog_introtext">
+            <div class="dialog_introtext">
                 <h4 id="dialog_h4intro"></h4>
             </div>
 
-            <div class="grid_dialog_list">
+            <div class="dialog_list">
 
                 <ul>
                     <li>Name: <span id="dialog_name"></span></li>
@@ -69,7 +89,7 @@
                 
             </div>
 
-            <div class="grid_dialog_close">
+            <div class="dialog_close">
                 <button id="btn_close">Close</button>
             </div>
 

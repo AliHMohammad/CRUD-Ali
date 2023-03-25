@@ -18,15 +18,32 @@
 
 // }
 
+let showingGrid = true;
+
 window.addEventListener("load", initApp);
 
 async function initApp() {
     const data = await getData("https://raw.githubusercontent.com/AliHMohammad/Data-Ali/main/obama.json");
     showAllChar(data)
 
+    document.querySelector("#button_change_display").addEventListener("click", switchFont);
     // showChar(obama)
     //const obama = await getData("https://raw.githubusercontent.com/AliHMohammad/Data-Ali/main/obama.json")
     //showChar(obama)
+}
+
+function switchFont() {
+    
+    if (showingGrid) {
+        showingGrid = false;
+        document.querySelector("#grid_output").classList.add("hidden");
+        document.querySelector("#table_section").classList.remove("hidden");
+    } else if (!showingGrid) {
+        showingGrid = true;
+        document.querySelector("#table_section").classList.add("hidden");
+        document.querySelector("#grid_output").classList.remove("hidden")
+    }
+
 }
 
 async function getData(link) {
@@ -52,9 +69,23 @@ function showChar(obj) {
     </article>
     `
     
-    document.querySelector("#output").insertAdjacentHTML("beforeend", htmlGrid);
+    document.querySelector("#grid_output").insertAdjacentHTML("beforeend", htmlGrid);
     document.querySelector("article:last-child").addEventListener("click", charClicked);
     
+    
+    const htmlTable = /*html*/ `
+    <tr>
+        <td><img src=${obj.image}></td>
+        <td>${obj.name}</td>
+        <td>${obj.occupation}</td>
+        <td>${obj.age}</td>
+    </tr>
+    `
+
+    document.querySelector("#tbody_output").insertAdjacentHTML("beforeend", htmlTable);
+    document.querySelector("tbody tr:last-child").addEventListener("click", charClicked);
+    
+
     function charClicked() {
         showDialog(obj);
     }
@@ -73,7 +104,7 @@ function showDialog(obj) {
 
     document.querySelector("#dialog_h4intro").textContent = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}.`
 
-    document.querySelector("#dialog_img").src = obj.image;
+    document.querySelector("#dialog_img_src").src = obj.image;
     document.querySelector("#dialog_h3title").textContent = obj.name.toUpperCase();
     document.querySelector("#dialog_name").textContent = obj.name;    
     document.querySelector("#dialog_nickname").textContent = obj.nickname;

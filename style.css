@@ -12,7 +12,6 @@
     --french-violet: rgb(111, 45, 210);
 }
 
-
 body {
     margin: 0;
     min-width: 255px;
@@ -35,10 +34,32 @@ body {
     border-bottom: 1px solid black;
     width: 100%;
     z-index: 9999;
-    box-shadow: 0 4px 10px -5px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 10px -5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 }
 
+.grid_header button {
+    position: fixed;
+    left: 60.5vw;
+    top: 2.2em;
+    scale: 0.85;
 
+    background-color: rgb(188, 48, 213);
+    border-radius: 8px;
+    border-style: none;
+    color: white;
+    cursor: pointer;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    height: 40px;
+    padding: 10px 16px;
+    text-align: center;
+    user-select: none;
+}
+
+.grid_header button:hover {
+    background-color: #f082ea;
+}
 
 .grid_header h1 {
     padding-top: 7px;
@@ -48,11 +69,11 @@ body {
 .grid_section {
     display: grid;
     padding: 20px;
-    padding-top: 120px;
     gap: 2em;
     grid-auto-rows: 10fr;
     grid-template-columns: 1fr;
     background-color: var(--isabelline);
+    padding-top: 120px;
 }
 
 .grid_item {
@@ -66,7 +87,7 @@ body {
     background-color: var(--taupe);
     text-align: center;
     border: 1px solid black;
-    
+    margin-top: 10px;
 }
 
 .grid_footer h2 {
@@ -122,9 +143,65 @@ body {
     }
 }
 
+
+/*===================== TABLE ===================*/
+
+#table_section {
+    padding: 20px;
+    padding-top: 100px;
+}
+
+table {
+    background-color: antiquewhite;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead {
+    font-weight: bold;
+    background-color: rgb(179, 138, 86);
+}
+
+table td:nth-child(1) {
+    width: 5%;
+}
+
+table td:nth-child(2) {
+    width: 7%;
+}
+
+table td:nth-child(3) {
+    width: 10%;
+}
+
+table td:nth-child(4) {
+    width: 5%;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(201, 184, 162);
+}
+
+tr td {
+    border: 1px solid var(--battleship-gray);
+    padding: 10px;
+}
+
+tbody tr:hover {
+    cursor: pointer;
+    background-color: rgb(156, 140, 118);
+}
+
+td img {
+    width: 80px;
+    padding: 10px;
+}
+
+
 /*===================== DIALOG ===================*/
 
-.grid_dialog_container {
+.dialog_container {
     display: grid;
     position: fixed;
     min-width: 450px;
@@ -143,7 +220,7 @@ body {
     border-radius: 20px;
 }
 
-.grid_dialog_title {
+.dialog_title {
     grid-area: tit;
     text-align: center;
     margin-bottom: 15px;
@@ -154,22 +231,22 @@ body {
     border-bottom: 1px solid var(--taupe);
 }
 
-.grid_dialog_title h3 {
+.dialog_title h3 {
     font-size: 1.70em;
 }
 
-.grid_dialog_img {
+.dialog_img {
     grid-area: img;
     padding-right: 50px;
     padding-left: 50px;
 }
 
-.grid_dialog_img img {
+.dialog_img img {
     width: 200px;
     height: auto;
 }
 
-.grid_dialog_introtext {
+.dialog_introtext {
     grid-area: int;
 }
 
@@ -177,20 +254,20 @@ body {
     padding-right: 50px;
 }
 
-.grid_dialog_list {
+.dialog_list {
     grid-area: lis;
 }
 
-.grid_dialog_list ul {
+.dialog_list ul {
     padding-left: 17px;
 }
 
-.grid_dialog_list ul li {
+.dialog_list ul li {
     padding-top: 7px;
     padding-right: 50px;
 }
 
-.grid_dialog_close {
+.dialog_close {
     grid-area: clos;
     padding-bottom: 10px;
 }
@@ -214,7 +291,6 @@ body {
     user-select: none;
 }
 
-
 #btn_close:hover,
 #btn_close:focus {
     background-color: #f082ea;
@@ -230,7 +306,6 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-
 
 
 /*===================== ANIMATIONS ===================*/
