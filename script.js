@@ -41,13 +41,16 @@ async function getData(link) {
 function showAllChar(list) {
 
     for (const obj of list) {
+        count++
+        console.log(`Char nr ${count}, ${obj.name}`);
+
         showChar(obj);
     }
 
 }
 
 function showChar(obj) {
-
+    
     const htmlGrid = /*html*/ `
     <article class="grid_item">
         <img src=${obj.image}>
@@ -66,8 +69,7 @@ function showChar(obj) {
 }
 
 function showDialog(obj) {
-    count++
-    console.log(`Char nr ${count}`);
+    
     // Kan kalde støtte funktioner for at formatte date f.eks (obj.date = formatDate(date))
 
     obj.schoolGrade = nullSchoolGrade(obj.schoolGrade)
