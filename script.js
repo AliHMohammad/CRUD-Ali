@@ -18,6 +18,8 @@
 
 // }
 
+let count = 0;
+
 window.addEventListener("load", initApp);
 
 async function initApp() {
@@ -64,6 +66,8 @@ function showChar(obj) {
 }
 
 function showDialog(obj) {
+    count++
+    console.log(`Char nr ${count}`);
     // Kan kalde støtte funktioner for at formatte date f.eks (obj.date = formatDate(date))
 
     obj.schoolGrade = nullSchoolGrade(obj.schoolGrade)
