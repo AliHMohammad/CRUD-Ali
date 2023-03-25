@@ -24,15 +24,20 @@ body {
 
 .grid_container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100vw;
     grid-template-rows: 7em 10fr 5em;
 }
 
 .grid_header {
     text-align: center;
+    position: fixed;
     background-color: var(--battleship-gray);
     border-bottom: 1px solid black;
+    width: 100%;
+    z-index: 9999;
 }
+
+
 
 .grid_header h1 {
     padding-top: 15px;
@@ -68,6 +73,7 @@ body {
     width: 100%;
     height: 400px;
     object-fit: contain;
+    /* object-fit: cover; */
 }
 
 .grid_item:hover {
