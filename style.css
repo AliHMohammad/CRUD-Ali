@@ -10,11 +10,23 @@
     --silver: rgb(188, 184, 177);
     --isabelline: rgb(244, 243, 238);
     --french-violet: rgb(111, 45, 210);
+
+    --neo-green: #2fff2f;
+    --neo-purple: #FF00F5;
+    --neo-turkish: #7DF9FF;
+    --neo-blue: #3300FF;
+    --neo-yellow: #FFFF00;
+    --neo-red: #FF4911;
+    --neo-dark-purple: #9723C9;
+    --neo-pink: #FFB2EF;
+    --neo-dark-green: #7FBC8C;
+    --neo-dark-red: #FF6B6B;
 }
 
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: 'Public Sans', sans-serif;
 }
 
 
@@ -29,28 +41,33 @@ body {
 .grid_header {
     text-align: center;
     position: fixed;
-    background-color: var(--battleship-gray);
-    border-bottom: 1px solid black;
+    /* background-color: var(--battleship-gray); */
+    background-color: var(--neo-green);
+    font-family: 'Archivo', sans-serif;
     width: 100%;
     z-index: 9999;
-    box-shadow: 0 4px 10px -5px rgba(0, 0, 0, 0.5);
-    
+    /* box-shadow: 0 4px 10px -5px rgba(0, 0, 0, 0.5); */
+    border-bottom: 3px solid black;
     padding-top: 7px;
-    padding-bottom: 10px;
+    
+}
+
+.grid_header h1 {
+    font-size: 40px;
 }
 
 .grid_header button {
-    position: absolute;
-    top: 4.3em;
-    left: 47vw;
+    position: relative;
+    bottom: 15px;
     scale: 0.9;
 
     background-color: rgb(188, 48, 213);
-    border-radius: 8px;
-    border-style: none;
-    color: white;
+    box-shadow: 2px 4px 0.4px black;
+    border: 3px solid black;
+    color: black;
     cursor: pointer;
-    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    font-weight: 600;
     font-size: 14px;
     height: 40px;
     padding: 10px 16px;
@@ -70,23 +87,28 @@ body {
     gap: 2em;
     grid-auto-rows: 10fr;
     grid-template-columns: 1fr;
-    background-color: var(--isabelline);
-    padding-top: 120px;
+    /* background-color: var(--isabelline); */
+    background-color: var(--neo-yellow);
+    padding-top: 180px;
+    padding-bottom: 50px;
 }
 
 .grid_item {
     border: 1px solid black;
     padding: 1em;
-    background-color: var(--silver);
+    /* background-color: var(--silver); */
+    background-color: var(--neo-red);
     border-radius: 10px;
-    box-shadow: 0px 1px 7px black;
+    /* box-shadow: 0px 1px 7px black; */
+    box-shadow: 10px 15px 1px black;
 }
 
 .grid_footer {
-    background-color: var(--taupe);
+    /* background-color: var(--taupe); */
+    background-color: var(--neo-dark-red);
     text-align: center;
     border: 1px solid black;
-    padding-top: 10px;
+    border-top: 3px solid black;
 }
 
 .grid_footer h2 {
@@ -104,7 +126,8 @@ body {
     cursor: pointer;
     transition: 0.5s;
     scale: 1.02;
-    box-shadow: 0px 2px 5px black;
+    /* box-shadow: 0px 2px 5px black; */
+    box-shadow: 13px 18px 1px black;
 }
 
 .grid_item h3,
@@ -147,22 +170,22 @@ body {
 
 #table_section {
     padding: 20px;
-    padding-top: 100px;
-    background-color: var(--isabelline);
-   
+    padding-top: 160px;
+    background-color: var(--neo-yellow);
+    padding-bottom: 50px;
 }
 
 table {
-    background-color: antiquewhite;
+    background-color: var(--neo-purple);
     margin-top: 20px;
     border-collapse: collapse;
     text-align: center;
-     box-shadow: 0px 2px 7px black;
+    box-shadow: 10px 14px 1.5px black;
 }
 
 thead {
     font-weight: bold;
-    background-color: rgb(179, 138, 86);
+    background-color: var(--neo-red);
 }
 
 table td:nth-child(1) {
@@ -182,17 +205,17 @@ table td:nth-child(4) {
 }
 
 tr:nth-child(even) {
-  background-color: rgb(201, 184, 162);
+  background-color: var(--neo-dark-purple);
 }
 
 tr td {
-    border: 1px solid var(--battleship-gray);
+    border: 2.5px solid black;
     padding: 10px;
 }
 
 tbody tr:hover {
     cursor: pointer;
-    background-color: rgb(156, 140, 118);
+    background-color: var(--neo-dark-green);
 }
 
 td img {
@@ -218,8 +241,11 @@ td img {
     width: 80%;
     max-width: 1000px;
     padding: 0px;
-    background-color: var(--french-violet);
+    /* background-color: var(--french-violet); */
+    background-color: var(--neo-turkish);
     border-radius: 20px;
+    box-shadow: 15px 20px 1.4px rgb(0, 0, 0);
+    border: 5px solid black;
 }
 
 .dialog_title {
@@ -280,22 +306,23 @@ td img {
     margin-bottom: 15px;
     left: 47.5%;
 
-    background-color: rgb(188, 48, 213);
-    border-radius: 8px;
-    border-style: none;
-    color: white;
+    /* background-color: rgb(188, 48, 213); */
+    background-color: #f082ea;
+    box-shadow: 2px 4px 0.4px black;
+    border: 3px solid black;
+    color: black;
     cursor: pointer;
-    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
     font-size: 14px;
     height: 40px;
-    padding: 10px 16px;
+    padding: 10px 24px;
     text-align: center;
     user-select: none;
 }
 
 #btn_close:hover,
 #btn_close:focus {
-    background-color: #f082ea;
+    background-color: var(--neo-pink);
 }
 
 .hidden {
