@@ -199,23 +199,17 @@ function nullAppearances(appearances) {
 }
 
 function correctName(name) {
-    
     let arr = name.split(" ");
-    console.log(arr);
     
-
     for (let i = 0; i < arr.length; i++) {
         let namePart = arr[i];
 
-        
         const firstLetter = namePart[0].toUpperCase();
         const restOfNamePart = namePart.toLowerCase().slice(1);
 
         const correctName = firstLetter.concat(restOfNamePart)
-    
         arr[i] = correctName
-        console.log(correctName);
     }
 
-
+    // return arr.join(" ");
 }
