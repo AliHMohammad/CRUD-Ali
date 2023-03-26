@@ -26,13 +26,13 @@ async function initApp() {
     const data = await getData("https://raw.githubusercontent.com/AliHMohammad/Data-Ali/main/obama.json");
     showAllChar(data)
 
-    document.querySelector("#button_change_display").addEventListener("click", switchFont);
+    document.querySelector("#button_change_display").addEventListener("click", changeDisplay);
     // showChar(obama)
     //const obama = await getData("https://raw.githubusercontent.com/AliHMohammad/Data-Ali/main/obama.json")
     //showChar(obama)
 }
 
-function switchFont() {
+function changeDisplay() {
     
     if (showingGrid) {
         showingGrid = false;
