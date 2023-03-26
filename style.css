@@ -56,6 +56,12 @@ body {
     font-size: 40px;
 }
 
+.grid_header p {
+    position: absolute;
+    top: 1%;
+    left: 48%;
+}
+
 .grid_header button {
     position: relative;
     bottom: 15px;
@@ -94,7 +100,7 @@ body {
 }
 
 .grid_item {
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 1em;
     /* background-color: var(--silver); */
     background-color: var(--neo-red);
@@ -176,16 +182,16 @@ body {
 }
 
 table {
-    background-color: var(--neo-purple);
+    background-color: var(--neo-red);
     margin-top: 20px;
     border-collapse: collapse;
     text-align: center;
-    box-shadow: 10px 14px 1.5px black;
+    box-shadow: 10px 14px 1.1px black;
 }
 
 thead {
     font-weight: bold;
-    background-color: var(--neo-red);
+    background-color: var(--neo-purple);
 }
 
 table td:nth-child(1) {
@@ -209,14 +215,21 @@ tr:nth-child(even) {
 }
 
 tr td {
-    border: 2.5px solid black;
+    border: 2.8px solid black;
     padding: 10px;
 }
 
 tbody tr:hover {
     cursor: pointer;
-    background-color: var(--neo-dark-green);
+    background-color: #ff693b;
 }
+
+tbody tr:nth-child(even):hover {
+    cursor: pointer;
+    background-color: #c34df5;
+}
+
+
 
 td img {
     width: 80px;
@@ -304,10 +317,11 @@ td img {
     position: relative;
     margin-top: 15px;
     margin-bottom: 15px;
-    left: 47.5%;
+    left: 46%;
 
     /* background-color: rgb(188, 48, 213); */
-    background-color: #f082ea;
+    
+    background-color: var(--neo-blue);
     box-shadow: 2px 4px 0.4px black;
     border: 3px solid black;
     color: black;
@@ -322,7 +336,7 @@ td img {
 
 #btn_close:hover,
 #btn_close:focus {
-    background-color: var(--neo-pink);
+    background-color: #7878ff;
 }
 
 .hidden {

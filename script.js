@@ -38,10 +38,13 @@ function switchFont() {
         showingGrid = false;
         document.querySelector("#grid_output").classList.add("hidden");
         document.querySelector("#table_section").classList.remove("hidden");
+        document.querySelector("#button_change_display").textContent = "Change to Grid"
     } else if (!showingGrid) {
         showingGrid = true;
         document.querySelector("#table_section").classList.add("hidden");
         document.querySelector("#grid_output").classList.remove("hidden")
+        document.querySelector("#button_change_display").textContent = "Change to Table"
+
     }
 
 }
