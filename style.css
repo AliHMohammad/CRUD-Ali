@@ -54,12 +54,12 @@ body {
 
 .grid_header h1 {
     font-size: 40px;
+    margin-top: 2px;
 }
 
 .grid_header p {
-    position: absolute;
-    top: 1%;
-    left: 48%;
+    margin: 0;
+    margin-top: 3px;
 }
 
 .grid_header button {
@@ -107,6 +107,7 @@ body {
     border-radius: 10px;
     /* box-shadow: 0px 1px 7px black; */
     box-shadow: 10px 15px 1px black;
+    
 }
 
 .grid_footer {
