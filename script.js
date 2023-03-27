@@ -18,14 +18,15 @@
 
 // }
 
-let showingGrid = true;
+let showingGrid;
 
 window.addEventListener("load", initApp);
 
 async function initApp() {
-    const data = await getData("https://raw.githubusercontent.com/AliHMohammad/Data-Ali/main/obama.json");
+    const data = await getData("https://cederdorff.github.io/dat-js/05-data/southpark.json");
     showAllChar(data)
 
+    showingGrid = true;
     document.querySelector("#button_change_display").addEventListener("click", changeDisplay);
     // showChar(obama)
     //const obama = await getData("https://raw.githubusercontent.com/AliHMohammad/Data-Ali/main/obama.json")
@@ -90,11 +91,11 @@ function showChar(obj) {
     
 
     function charClicked() {
-        showDialog(obj);
+        showModal(obj);
     }
 }
 
-function showDialog(obj) {
+function showModal(obj) {
     
     // Kan kalde støtte funktioner for at formatte date f.eks (obj.date = formatDate(date))
     
