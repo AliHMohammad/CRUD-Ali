@@ -97,8 +97,6 @@ function showChar(obj) {
 
 function showModal(obj) {
     
-    // Kan kalde støtte funktioner for at formatte date f.eks (obj.date = formatDate(date))
-    
     obj.nickname = nullNickname(obj.nickname);
     obj.schoolGrade = nullSchoolGrade(obj.schoolGrade);
     obj.catchPhrase = nullCatchphrase(obj.catchPhrase);
@@ -106,7 +104,8 @@ function showModal(obj) {
     obj.appearances = nullAppearances(obj.appearances);
     correctName(obj.name)
 
-    document.querySelector("#dialog_h4intro").textContent = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}.`
+    // document.querySelector("#dialog_h4intro").textContent = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}.`
+    document.querySelector("#dialog_h4intro").textContent = description(obj);
 
     document.querySelector("#dialog_img_src").src = obj.image;
     document.querySelector("#dialog_h3title").textContent = obj.name.toUpperCase();
@@ -153,6 +152,18 @@ function removeAnimationsAddHidden() {
 
 
 /* ================= HELPER FUNCTIONS ================= */
+
+function description(obj) {
+    let text = "";
+
+    if (obj.schoolGrade != "None") {
+        text = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}. ${obj.name} attends school at ${obj.schoolGrade}th grade.`
+    } else if (obj.schoolGrade == "None") {
+        text = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}.`
+    }
+
+    return text
+}
 
 function nullNickname(nickname) {
 
