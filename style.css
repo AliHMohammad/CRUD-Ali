@@ -241,22 +241,24 @@ td img {
     display: grid;
     position: fixed;
     min-width: 450px;
-    top: 47%;
+    top: 55%;
     /* position: absolute;
     margin-top: 3%; */
     grid-template-areas:
         "tit tit"
         "img int"
         "img lis"
-        "clos clos";
-    width: 80%;
-    scale: 0.8;
+        "clos clos"
+    ;
+    height: 75vh;
+    scale: 1;
     max-width: 1000px;
     padding: 0px;
     background-color: var(--neo-turkish);
     border-radius: 20px;
     box-shadow: 15px 20px 1.4px rgb(0, 0, 0);
     border: 5px solid black;
+    overflow-y: scroll;
 }
 
 .dialog_title {

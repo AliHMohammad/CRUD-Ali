@@ -23,7 +23,9 @@ let showingGrid;
 window.addEventListener("load", initApp);
 
 async function initApp() {
-    const data = await getData("https://cederdorff.github.io/dat-js/05-data/southpark.json");
+    let data = await getData("https://cederdorff.github.io/dat-js/05-data/southpark.json");
+    // data = data.sort(sortAge);
+    data = data.sort(sortName);
     showAllChar(data)
 
     showingGrid = true;
@@ -54,6 +56,14 @@ async function getData(link) {
     const response = await fetch(link);
     const data = await response.json();
     return data;
+}
+
+function sortAge(obj1, obj2) {
+    return obj1.age - obj2.age;
+}
+
+function sortName(obj1, obj2) {
+    return obj1.name.localeCompare(obj2.name);
 }
 
 function showAllChar(list) {
@@ -103,7 +113,7 @@ function showModal(obj) {
     obj.episodes = nullEpisodes(obj.episodes);
     obj.appearances = nullAppearances(obj.appearances);
     obj.gender = capitalizeGender(obj.gender);
-    correctName(obj.name)
+    //correctName(obj.name)
 
     // document.querySelector("#dialog_h4intro").textContent = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}.`
     document.querySelector("#dialog_h4intro").textContent = description(obj);
@@ -234,5 +244,5 @@ function correctName(name) {
         arr[i] = correctName
     }
 
-    // return arr.join(" ");
+    return arr.join(" ");
 }
