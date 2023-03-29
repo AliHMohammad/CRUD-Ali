@@ -1,23 +1,5 @@
 "use strict";
 
-// const obama = {
-//     name: "Barack Obama",
-//     nickname: "'Hussein'",
-//     image: "https://static.wikia.nocookie.net/southpark/images/f/f0/Barack-obama.png",
-//     occupation: "President of the United States (formerly)",
-//     age: 61,
-//     voicedBy: "Trey Parker",
-//     gender: "Male",
-//     religion: "Protestant",
-//     catchPhrase: '"My fellow Americans"',
-//     hairColor: "Black",
-//     schoolGrade: undefined,
-//     episodes: "S12E02, S12E12, S14E01, S15E02, S16E14",
-//     appearances: 5,
-//     firstAppearance: "S12E02"
-
-// }
-
 let showingGrid;
 
 window.addEventListener("load", initApp);
@@ -30,9 +12,6 @@ async function initApp() {
 
     showingGrid = true;
     document.querySelector("#button_change_display").addEventListener("click", changeDisplay);
-    // showChar(obama)
-    //const obama = await getData("https://raw.githubusercontent.com/AliHMohammad/Data-Ali/main/obama.json")
-    //showChar(obama)
 }
 
 function changeDisplay() {
@@ -47,7 +26,6 @@ function changeDisplay() {
         document.querySelector("#table_section").classList.add("hidden");
         document.querySelector("#grid_output").classList.remove("hidden")
         document.querySelector("#button_change_display").textContent = "Change to Table"
-
     }
 
 }
@@ -100,6 +78,7 @@ function showChar(obj) {
     document.querySelector("tbody tr:last-child").addEventListener("click", charClicked);
     
 
+
     function charClicked() {
         showModal(obj);
     }
@@ -113,9 +92,7 @@ function showModal(obj) {
     obj.episodes = nullEpisodes(obj.episodes);
     obj.appearances = nullAppearances(obj.appearances);
     obj.gender = capitalizeGender(obj.gender);
-    //correctName(obj.name)
 
-    // document.querySelector("#dialog_h4intro").textContent = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}.`
     document.querySelector("#dialog_h4intro").textContent = description(obj);
 
     document.querySelector("#dialog_img_src").src = obj.image;
@@ -147,7 +124,6 @@ function showStartAnimation() {
     document.querySelector("#dialog").classList.add("slideLeftToRight");
     document.querySelector("#dialog").classList.remove("hidden")
 }
-
 
 function showCloseAnimation() {
     document.querySelector("#dialog").classList.add("slideRightToLeft");
@@ -228,21 +204,4 @@ function capitalizeGender(gender) {
     } else {
         return gender[0].toUpperCase() + gender.slice(1).toLowerCase();
     }
-
-}
-
-function correctName(name) {
-    let arr = name.split(" ");
-    
-    for (let i = 0; i < arr.length; i++) {
-        let namePart = arr[i];
-
-        const firstLetter = namePart[0].toUpperCase();
-        const restOfNamePart = namePart.toLowerCase().slice(1);
-
-        const correctName = firstLetter.concat(restOfNamePart)
-        arr[i] = correctName
-    }
-
-    return arr.join(" ");
 }
