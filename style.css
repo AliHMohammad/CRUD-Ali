@@ -64,6 +64,26 @@ body {
     background-color: #f082ea;
 }
 
+.grid_header select {
+    background-color: rgb(188, 48, 213);
+    box-shadow: 2px 4px 0.4px black;
+    border: 3px solid black;
+    color: black;
+    cursor: pointer;
+    font-weight: 550;
+    text-align: center;
+    user-select: none;
+    margin-bottom: 10px;
+}
+
+.grid_header select option {
+    font-weight: 450;
+}
+
+.grid_header select:focus {
+  background-color: #f082ea;
+}
+
 .grid_section {
     display: grid;
     padding: 20px;
@@ -71,7 +91,7 @@ body {
     grid-auto-rows: 10fr;
     grid-template-columns: 1fr;
     background-color: var(--neo-yellow);
-    padding-top: 160px;
+    padding-top: 180px;
     padding-bottom: 50px;
 }
 
@@ -151,7 +171,7 @@ body {
 
 #table_section {
     padding: 20px;
-    padding-top: 140px;
+    padding-top: 160px;
     background-color: var(--neo-yellow);
     padding-bottom: 50px;
 }

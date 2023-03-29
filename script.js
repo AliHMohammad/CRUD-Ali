@@ -1,17 +1,18 @@
 "use strict";
 
 let showingGrid;
-
+let data;
 window.addEventListener("load", initApp);
 
 async function initApp() {
-    let data = await getData("https://cederdorff.github.io/dat-js/05-data/southpark.json");
+    data = await getData("https://cederdorff.github.io/dat-js/05-data/southpark.json");
     // data = data.sort(sortAge);
-    data = data.sort(sortName);
+    data = data.sort(sortNameAToZ);
     showAllChar(data)
 
     showingGrid = true;
     document.querySelector("#button_change_display").addEventListener("click", changeDisplay);
+    document.querySelector("#sort").addEventListener("change", changeSort)
 }
 
 function changeDisplay() {
@@ -30,19 +31,49 @@ function changeDisplay() {
 
 }
 
+function changeSort() {
+    const formValue = document.querySelector("#sort").value
+    document.querySelector("#grid_output").innerHTML = "";
+    document.querySelector("#tbody_output").innerHTML = "";
+
+    if (formValue == "A") {
+        data = data.sort(sortNameAToZ);
+        showAllChar(data)
+    } else if (formValue == "Z") {
+        data = data.sort(sortNameZToA);
+        showAllChar(data)
+    } else if (formValue == "Young") {
+        data = data.sort(sortAgeYoungToOld);
+        showAllChar(data)
+    } else if (formValue == "Old") {
+        data = data.sort(sortAgeOldToYoung);
+        showAllChar(data)
+    }
+}
+
 async function getData(link) {
     const response = await fetch(link);
     const data = await response.json();
     return data;
 }
 
-function sortAge(obj1, obj2) {
+function sortAgeYoungToOld(obj1, obj2) {
     return obj1.age - obj2.age;
 }
 
-function sortName(obj1, obj2) {
+function sortAgeOldToYoung(obj1, obj2) {
+    return obj2.age - obj1.age;
+}
+
+function sortNameAToZ(obj1, obj2) {
     return obj1.name.localeCompare(obj2.name);
 }
+
+function sortNameZToA(obj1, obj2) {
+    return obj2.name.localeCompare(obj1.name);
+}
+
+
 
 function showAllChar(list) {
 
@@ -205,3 +236,6 @@ function capitalizeGender(gender) {
         return gender[0].toUpperCase() + gender.slice(1).toLowerCase();
     }
 }
+
+
+
