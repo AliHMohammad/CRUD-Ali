@@ -102,6 +102,7 @@ function showModal(obj) {
     obj.catchPhrase = nullCatchphrase(obj.catchPhrase);
     obj.episodes = nullEpisodes(obj.episodes);
     obj.appearances = nullAppearances(obj.appearances);
+    obj.gender = capitalizeGender(obj.gender);
     correctName(obj.name)
 
     // document.querySelector("#dialog_h4intro").textContent = `${obj.name} is ${obj.age} years old and is voiced by ${obj.voicedBy}. His first appearance was in ${obj.firstAppearance}.`
@@ -208,6 +209,16 @@ function nullAppearances(appearances) {
     } else {
         return appearances
     }
+}
+
+function capitalizeGender(gender) {
+
+    if (!gender) {
+        return "Unknown"
+    } else {
+        return gender[0].toUpperCase() + gender.slice(1).toLowerCase();
+    }
+
 }
 
 function correctName(name) {
