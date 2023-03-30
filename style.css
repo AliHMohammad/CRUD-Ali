@@ -28,21 +28,32 @@ body {
     z-index: 9999;
     border-bottom: 3px solid black;
     padding-top: 7px;
-    
+    display: grid;
+    grid-template-areas: 
+    "titel titel"
+    "button form";
 }
 
-.grid_header h1 {
+
+.grid-header-titel{
+    grid-area: titel;
+}
+
+.grid-header-button {
+    grid-area: button;
+}
+
+.grid-header-form {
+    grid-area: form;
+}
+
+.header_titel {
     font-size: 40px;
     margin-top: 2px;
     margin-bottom: 20px;
 }
 
-.grid_header p {
-    margin: 0;
-    margin-top: 3px;
-}
-
-.grid_header button {
+.header_button {
     position: relative;
     bottom: 15px;
     scale: 0.9;
@@ -60,11 +71,11 @@ body {
     user-select: none;
 }
 
-.grid_header button:hover {
+.header_button:hover {
     background-color: #f082ea;
 }
 
-.grid_header select {
+.header_form select {
     background-color: rgb(188, 48, 213);
     box-shadow: 2px 4px 0.4px black;
     border: 3px solid black;
@@ -73,14 +84,13 @@ body {
     font-weight: 550;
     text-align: center;
     user-select: none;
-    margin-bottom: 10px;
 }
 
-.grid_header select option {
+.header_form select option {
     font-weight: 450;
 }
 
-.grid_header select:focus {
+.header_form select:focus {
   background-color: #f082ea;
 }
 
@@ -91,7 +101,7 @@ body {
     grid-auto-rows: 10fr;
     grid-template-columns: 1fr;
     background-color: var(--neo-yellow);
-    padding-top: 180px;
+    padding-top: 160px;
     padding-bottom: 50px;
 }
 
@@ -171,7 +181,7 @@ body {
 
 #table_section {
     padding: 20px;
-    padding-top: 160px;
+    padding-top: 140px;
     background-color: var(--neo-yellow);
     padding-bottom: 50px;
 }

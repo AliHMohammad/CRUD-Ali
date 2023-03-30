@@ -2,6 +2,7 @@
 
 let showingGrid;
 let data;
+
 window.addEventListener("load", initApp);
 
 async function initApp() {
@@ -38,17 +39,15 @@ function changeSort() {
 
     if (formValue == "A") {
         data = data.sort(sortNameAToZ);
-        showAllChar(data)
     } else if (formValue == "Z") {
         data = data.sort(sortNameZToA);
-        showAllChar(data)
     } else if (formValue == "Young") {
         data = data.sort(sortAgeYoungToOld);
-        showAllChar(data)
     } else if (formValue == "Old") {
         data = data.sort(sortAgeOldToYoung);
-        showAllChar(data)
     }
+
+    showAllChar(data)
 }
 
 async function getData(link) {
@@ -236,6 +235,3 @@ function capitalizeGender(gender) {
         return gender[0].toUpperCase() + gender.slice(1).toLowerCase();
     }
 }
-
-
-
