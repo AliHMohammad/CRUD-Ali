@@ -93,6 +93,17 @@ function showChar(obj) {
     
     document.querySelector("#grid_output").insertAdjacentHTML("beforeend", htmlGrid);
     document.querySelector("article:last-child").addEventListener("click", charClicked);
+
+    document.querySelector("article:last-child").addEventListener("mouseenter", addBlue);
+    document.querySelector("article:last-child").addEventListener("mouseleave", removeBlue);
+
+    function addBlue() {
+        this.classList.add("blue")
+    }
+
+    function removeBlue() {
+        this.classList.remove("blue")
+    }
     
     
     const htmlTable = /*html*/ `

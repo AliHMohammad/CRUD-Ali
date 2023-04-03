@@ -385,9 +385,15 @@ td img {
     20% {
         transform: translate(-2em, -50%);
     }
-
+    
     100% {
         transform: translate(100vw, -50%);
     }
 }
-/*text-transform: capitalize;
+
+.blue{
+    background-color: var(--neo-turkish);
+}
+
+
+/*text-transform: capitalize;*/
